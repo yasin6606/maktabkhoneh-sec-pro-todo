@@ -4,6 +4,7 @@ import { createStore } from 'redux'
 import { BrowserRouter } from 'react-router-dom'
 import Reducer from './Reducer/Reducer';
 import TodoEntry from './Components/TodoEntry';
+import TodoItems from './Components/TodoItems';
 
 function App() {
 
@@ -13,8 +14,9 @@ function App() {
     <>
       <Provider store={store}>
         <BrowserRouter>
-          <div store={store} className="container d-flex justify-content-center mt-5">
+          <div className="container d-flex justify-content-center mt-5">
             <TodoEntry />
+            <TodoItems />
           </div>
         </BrowserRouter>
       </Provider>
