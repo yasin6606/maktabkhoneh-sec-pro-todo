@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'w3-css/w3.css';
+import 'w3-css/4/w3pro.css';
+import '../node_modules/vazir-font/dist/font-face.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
