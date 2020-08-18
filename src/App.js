@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Reducer from './Reducer/Reducer';
 import TodoEntry from './Components/TodoEntry';
 import TodoItems from './Components/TodoItems';
+import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 
 function App() {
 
@@ -14,10 +15,10 @@ function App() {
     <>
       <Provider store={store}>
         <BrowserRouter>
-          <div className="container d-flex justify-content-center mt-5">
+          <MDBContainer className="mt-5">
             <TodoEntry />
             <TodoItems />
-          </div>
+          </MDBContainer>
         </BrowserRouter>
       </Provider>
     </>
