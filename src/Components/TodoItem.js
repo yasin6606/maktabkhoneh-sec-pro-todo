@@ -17,7 +17,13 @@ class TodoItem extends Component {
     };
 
     // handler check box to completed or not
-    completedHandler = e => this.setState({ completedChecked: e.currentTarget.checked });
+    completedHandler = e => {
+        this.setState({ completedChecked: e.currentTarget.checked });
+
+        // this.props.status = e.currentTarget.checked
+
+        this.props.completed(e.currentTarget.checked, this.props.id);
+    };
 
     // call remove function from prop to remove specific item from the list
     remove = () => this.props.removed(this.props.id);
@@ -42,7 +48,7 @@ class TodoItem extends Component {
                         </MDBRow>
                     </MDBCol>
                     <MDBCol className="col-1">
-                        <FaTimes className="text-danger" onClick={this.remove} />
+                        <FaTimes className="text-warning" onClick={this.remove} />
                     </MDBCol>
                 </MDBRow>
             </>
