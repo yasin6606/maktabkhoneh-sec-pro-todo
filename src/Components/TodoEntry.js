@@ -35,7 +35,7 @@ class TodoEntry extends Component {
                         <MDBCol>
                             <MDBRow>
                                 <MDBCol>
-                                    <h1 className="text-white royal-font">Todo App</h1>
+                                    <h1 className="text-primary royal-font">Todo App</h1>
                                 </MDBCol>
                             </MDBRow>
                             <MDBRow className="mt-3 border rounded-top bg-white">

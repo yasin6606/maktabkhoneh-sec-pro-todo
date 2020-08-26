@@ -84,7 +84,7 @@ class TodoItems extends Component {
             <>
                 <MDBContainer className="text-left col-6 py-3">
                     <MDBRow className={this.props.data ? null : "d-none"}>
-                        <MDBCol className="text-white">
+                        <MDBCol className="text-info">
                             {
                                 (this.state.show.all === true && this.state.list) ||
                                 (this.state.show.completed === true && this.state.list.filter(i => ids.includes(Number(i.key)))) ||
@@ -96,20 +96,20 @@ class TodoItems extends Component {
                         <MDBCol>
                             <MDBRow>
                                 <MDBCol xl="3" className="py-3" middle={true}>
-                                    <p className="m-0 text-white">
+                                    <p className="m-0 text-info">
                                         {this.state.list.filter(i => !ids.includes(Number(i.key))).length} item(s) left
                                     </p>
                                 </MDBCol>
                                 <MDBCol xl="7" className="py-3" middle={true}>
                                     <MDBRow>
                                         <MDBCol className="text-right">
-                                            <MDBBtn className="text-white" onClick={this.showAll}>All</MDBBtn>
+                                            <MDBBtn className="text-info" onClick={this.showAll}>All</MDBBtn>
                                         </MDBCol>
                                         <MDBCol className="text-right">
-                                            <MDBBtn className="text-white" onClick={this.showUncompleted}>Active</MDBBtn>
+                                            <MDBBtn className="text-info" onClick={this.showUncompleted}>Active</MDBBtn>
                                         </MDBCol>
                                         <MDBCol className="text-right">
-                                            <MDBBtn className="text-white" onClick={this.showCompleted}>Completed</MDBBtn>
+                                            <MDBBtn className="text-info" onClick={this.showCompleted}>Completed</MDBBtn>
                                         </MDBCol>
                                     </MDBRow>
                                 </MDBCol>
