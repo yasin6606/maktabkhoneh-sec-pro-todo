@@ -31,10 +31,10 @@ class TodoItem extends Component {
     render = () => {
         return (
             <>
-                <MDBRow className="text-left py-3 border-bottom" key={this.props.id}>
-                    <MDBCol className="col-11">
+                <MDBRow className="text-left py-3 border-bottom d-flex justify-content-between px-3" key={this.props.id}>
+                    <MDBCol xs="10">
                         <MDBRow>
-                            <MDBCol middle={true} xl="1" lg="1" md="2" sm="2" xs="2">
+                            <MDBCol middle={true}>
                                 <input
                                     type="checkbox"
                                     value="off"
@@ -42,12 +42,12 @@ class TodoItem extends Component {
                                     onChange={this.completedHandler}
                                 />
                             </MDBCol>
-                            <MDBCol middle={true} xl="11" lg="11" md="10" sm="10" xs="10">
+                            <MDBCol middle={true}>
                                 <p className={`font-weight-bold h5 ${this.state.completedChecked && `line-through text-secondary italic`}`}>{this.props.title}</p>
                             </MDBCol>
                         </MDBRow>
                     </MDBCol>
-                    <MDBCol className="col-1">
+                    <MDBCol xs="2">
                         <FaTimes className="text-warning" onClick={this.remove} />
                     </MDBCol>
                 </MDBRow>

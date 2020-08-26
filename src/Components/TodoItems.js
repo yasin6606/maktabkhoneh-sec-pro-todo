@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
 import { connect } from 'react-redux';
+import './../CSS/fontSize.css';
 
 // this is initial list of id of works that completed
 let ids = [];
@@ -82,7 +83,7 @@ class TodoItems extends Component {
     render = () => {
         return (
             <>
-                <MDBContainer className="text-left col-6 py-3">
+                <MDBContainer className="text-left col-12 col-md-8 col-lg-6 py-3">
                     <MDBRow className={this.props.data ? null : "d-none"}>
                         <MDBCol className="text-info">
                             {
@@ -94,22 +95,22 @@ class TodoItems extends Component {
                     </MDBRow>
                     <MDBRow>
                         <MDBCol>
-                            <MDBRow>
-                                <MDBCol xl="3" className="py-3" middle={true}>
-                                    <p className="m-0 text-info">
+                            <MDBRow className="d-flex justify-content-between">
+                                <MDBCol xs="5" className="py-3" middle={true}>
+                                    <p className="m-0 text-info tinyFontSize font-weight-bold">
                                         {this.state.list.filter(i => !ids.includes(Number(i.key))).length} item(s) left
                                     </p>
                                 </MDBCol>
-                                <MDBCol xl="7" className="py-3" middle={true}>
+                                <MDBCol xs="7" className="py-3" middle={true}>
                                     <MDBRow>
                                         <MDBCol className="text-right">
-                                            <MDBBtn className="text-info" onClick={this.showAll}>All</MDBBtn>
+                                            <MDBBtn className="text-info tinyFontSize" onClick={this.showAll}>All</MDBBtn>
                                         </MDBCol>
                                         <MDBCol className="text-right">
-                                            <MDBBtn className="text-info" onClick={this.showUncompleted}>Active</MDBBtn>
+                                            <MDBBtn className="text-info tinyFontSize" onClick={this.showUncompleted}>Active</MDBBtn>
                                         </MDBCol>
                                         <MDBCol className="text-right">
-                                            <MDBBtn className="text-info" onClick={this.showCompleted}>Completed</MDBBtn>
+                                            <MDBBtn className="text-info tinyFontSize" onClick={this.showCompleted}>Completed</MDBBtn>
                                         </MDBCol>
                                     </MDBRow>
                                 </MDBCol>
